@@ -14,6 +14,13 @@ class MainTest {
     }
 
     @Test
+    void getNumberOfSubBreedsValidBreedButNoSubBreeds() {
+        DogApiBreedFetcher test = new DogApiBreedFetcher();
+
+        assertEquals(0, Main.getNumberOfSubBreeds("shiba", test));
+    }
+
+    @Test
     void getNumberOfSubBreedsInvalidBreed() {
         BreedFetcherForLocalTesting mock = new BreedFetcherForLocalTesting();
 
